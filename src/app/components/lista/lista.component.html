@@ -1,0 +1,13 @@
+<mat-card class="card-section">
+  <mat-card-content>
+    <mat-list> 
+      <mat-list-item *ngFor="let item of items; last as last">
+        <mat-icon class="pointer" title="Edit" (click)="openEditDialog(item)">create</mat-icon>
+        <mat-icon class="pointer" title="Remove" (click)="eliminar(item)">remove_circle_outline</mat-icon>
+        <h4 mat-line><strong>{{item.name}}</strong></h4>
+        <p mat-line>{{item.id}}</p>
+        <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+     </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
